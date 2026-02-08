@@ -15,6 +15,7 @@
   --crystal-dark: #E0E8FF;
   --crystal-glow: rgba(240, 244, 255, 0.7);
   --shadow: rgba(0,0,0,0.15);
+  --black-diamond: #000000;
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -112,7 +113,7 @@ header {
   justify-content: center;
   padding: 3rem 2rem;
   gap: 4rem;
-  flex-wrap: wrap; /* para sa mobile */
+  flex-wrap: wrap;
 }
 
 .door-container {
@@ -156,19 +157,18 @@ header {
   opacity: 0.6;
 }
 
-/* DOOR TITLE */
+/* DOOR TITLE - BLACK DIAMOND FONT */
 .door-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
   font-weight: 900;
+  font-size: 2.2rem;
   text-align: center;
-  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--black-diamond);
   margin-bottom: 2rem;
-  letter-spacing: 2px;
-  text-shadow: 0 2px 10px rgba(212,175,55,0.3);
+  letter-spacing: 3px;
+  text-shadow: 
+    0 2px 8px rgba(212,175,55,0.4),
+    0 0 15px rgba(212,175,55,0.2);
 }
 
 /* DOOR PANELS */
@@ -306,7 +306,7 @@ header {
   box-shadow: 0 8px 25px rgba(212,175,55,0.5);
 }
 
-/* SHARED SIGN UP SECTION - CENTERED BELOW DOORS */
+/* SHARED SIGN UP */
 .shared-signup {
   width: 100%;
   max-width: 800px;
@@ -370,6 +370,7 @@ footer a:hover { text-decoration: underline; }
   }
   .door-container { width: 100%; max-width: 400px; }
   .logo { font-size: 2.2rem; }
+  .door-title { font-size: 2rem; }
   .shared-signup { margin: 2rem auto 1.5rem; padding: 1rem; }
 }
 </style>
@@ -445,7 +446,7 @@ footer a:hover { text-decoration: underline; }
   
 </div>
 
-<!-- SHARED SIGN UP - CENTERED BELOW DOORS -->
+<!-- SHARED SIGN UP -->
 <div class="shared-signup">
   <p>Don't have an account yet?</p>
   <button class="shared-signup-btn" onclick="handleSignUp('shared')">Sign Up Now</button>
